@@ -1,0 +1,11 @@
+version: '3'
+services:
+  scipy-notebook:
+    container_name: scpipy-notebook
+    build: .
+    ports:
+      - "8888:8888"
+    volumes:
+      - ./workspace:/home/jovyan/workspace
+      - ./.jupyter:/home/jovyan/.jupyter
+    user: 1000:1000
